@@ -17,8 +17,22 @@ int main(){
         cout << "Digite 2 para remover um elemento\n";
         cout << "Digite 3 para imprimir a pilha\n";
         cout << "Digite 4 para verificar o tamanho da pilha\n";
-    }
-
+        cin >> op;
+        if (op == 1){
+            cout << "Digite o elemento a ser inserido: ";
+            cin >> item;
+            pilha1.inserir(item);
+        }else if (op == 2){
+            item = pilha1.remover();
+            cout << "Elemento removido: " << item << endl;
+        }else if (op == 3){
+            pilha1.imprimir(); 
+        }else if (op == 4){
+            pilha1.qualtamanho();
+        }
+    }while (op != 0);
+ 
+ 
 
     return 0;
 }
