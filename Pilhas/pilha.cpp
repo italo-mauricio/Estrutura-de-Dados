@@ -1,5 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "pilha.h"
+#include <iostream>
 
 
 using namespace std;
@@ -26,7 +28,15 @@ using namespace std;
     }
 
     void pilha::inserir(TipoItem item)      // push
-    {}
+    {
+        if (estacheio()){
+            cout << "A pilha está cheia!\n";
+            cout << "Não é possível inserir este elemento\n";
+        } else{
+            estrutura[tamanho] = item;
+            tamanho++;
+        }
+    }
 
     TipoItem pilha::remover()     // pop
     {}
