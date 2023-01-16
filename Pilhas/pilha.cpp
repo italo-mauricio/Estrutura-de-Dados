@@ -8,7 +8,7 @@ using namespace std;
  
     pilha::pilha()   // função construtra tem que ser o mesmo nome da classe
     {
-        tamanho 0;
+        tamanho = 0;
         estrutura = new TipoItem[max_itens];
     }
 
