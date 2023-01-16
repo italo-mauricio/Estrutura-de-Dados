@@ -39,11 +39,28 @@ using namespace std;
     }
 
     TipoItem pilha::remover()     // pop
-    {}
+    {
+        if (estavazia()){
+            cout << "A pilha está vazia!\n";
+            cout << "Não existem elementos para remover!\n";
+        } else{
+            tamanho --;
+            return estrutura[tamanho];
+            
+        }
+    }
     
     void pilha::imprimir()        // imprimir a pilha
-    {}
+    {
+        cout << "Pilha: [ ";
+        for (int i = 0; i < tamanho; i++){
+            cout << estrutura[i] << " ";
+        }
+        cout << "]\n";
+    }
 
     int pilha::qualtamanho()      // lenght
-    {}
+    {
+        return tamanho;
+    }
     
