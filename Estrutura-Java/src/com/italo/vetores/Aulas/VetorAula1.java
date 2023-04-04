@@ -38,6 +38,12 @@ public class VetorAula1 {
     public int tamanho(){
         return this.tamanho;
     }
+
+    public String search(int position){
+        return this.elementos[position];
+    }
+
+
     @Override
     public String toString(){
 
