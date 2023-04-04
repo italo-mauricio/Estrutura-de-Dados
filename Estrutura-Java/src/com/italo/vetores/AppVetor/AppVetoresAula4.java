@@ -9,11 +9,8 @@ public class AppVetoresAula4 {
         vetor.addVetorBoolean("Elemento 1");
         vetor.addVetorBoolean("Elemento 2");
         vetor.addVetorBoolean("Elemento 3");
-
         System.out.println(vetor.tamanho());
-
-
-
+        System.out.println(vetor.toString());
 
     }
 }
