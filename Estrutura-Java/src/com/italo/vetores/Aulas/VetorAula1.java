@@ -1,4 +1,6 @@
 package com.italo.vetores.Aulas;
+import java.util.Arrays;
+
 
 public class VetorAula1 {
     private final String[] elementos;
@@ -25,7 +27,7 @@ public class VetorAula1 {
             throw new Exception("Vetor já está cheio, não é possível adicionar mais elementos");
         }
     }
-    public boolean addVetorBoolean(String elemento) throws Exception {
+    public boolean addVetorBoolean(String elemento){
         if(this.tamanho < this.elementos.length){
             this.elementos[this.tamanho] = elemento;
             this.tamanho++;
@@ -33,11 +35,13 @@ public class VetorAula1 {
         }
         return false;
     }
-
     public int tamanho(){
         return this.tamanho;
     }
-
+    @Override
+    public String toString(){
+        return Arrays.toString(elementos);
+    }
 
 
 }
