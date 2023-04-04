@@ -34,6 +34,10 @@ public class VetorAula1 {
         return false;
     }
 
+    public int tamanho(){
+        return this.tamanho;
+    }
+
 
 
 }
