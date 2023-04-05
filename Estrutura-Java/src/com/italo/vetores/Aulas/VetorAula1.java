@@ -10,7 +10,6 @@ public class VetorAula1 {
         this.elementos = new String[capacidade];     // construtor definindo a capacidade do vetor
         this.tamanho = 0;
     }
-
     public void addVetorPadrao(String elemento){
         for(int i = 0; i < this.elementos.length; i++){
             if (this.elementos[i] == null){     // se a posição for nula, quer dizer que está disponível, pode adicionar
@@ -39,15 +38,16 @@ public class VetorAula1 {
         return this.tamanho;
     }
 
-    public String search(int position){
-        return this.elementos[position];
+    public String busca(int posicao){
+        if(!(posicao >= 0 && posicao < tamanho)){
+            throw new IllegalArgumentException("Posição inválida");
+        }
+        return this.elementos[posicao];
     }
-
 
     @Override
     public String toString(){
-
-        StringBuilder s = new StringBuilder();  // utilizando o super builder eu deixo o meu us ode String mais optmizado
+        StringBuilder s = new StringBuilder();  // utilizando o super builder eu deixo o meu uso de String mais optmizado
         s.append("[");
         for (int i = 0; i < this.tamanho-1; i++){
             s.append(this.elementos[i]);
@@ -57,9 +57,6 @@ public class VetorAula1 {
           s.append(this.elementos[this.tamanho-1]);
         }
         s.append("]");
-
         return s.toString();
     }
-
-
 }
