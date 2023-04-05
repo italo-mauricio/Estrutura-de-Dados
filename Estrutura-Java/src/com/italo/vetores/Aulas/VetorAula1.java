@@ -45,6 +45,15 @@ public class VetorAula1 {
         return this.elementos[posicao];
     }
 
+    public int buscaExiste(String elemento){    // busca sequencial dentro de um vetor
+        for(int i = 0; i < this.tamanho; i++){
+            if (this.elementos[i].equals(elemento)){
+                return i;
+            }
+        }
+        return -1;
+    }
+
     @Override
     public String toString(){
         StringBuilder s = new StringBuilder();  // utilizando o super builder eu deixo o meu uso de String mais optmizado
