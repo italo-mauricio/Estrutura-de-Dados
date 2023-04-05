@@ -3,17 +3,17 @@ import java.util.Arrays;
 
 
 public class VetorAula1 {
-    private final String[] elementos;
-    private int tamanho;
+    private final String[] elementos;   // definindo um vetor de Strings
+    private int tamanho;                // definindo um tamanho de inteiros
 
     public VetorAula1(int capacidade){
-        this.elementos = new String[capacidade];
+        this.elementos = new String[capacidade];     // construtor definindo a capacidade do vetor
         this.tamanho = 0;
     }
 
     public void addVetorPadrao(String elemento){
         for(int i = 0; i < this.elementos.length; i++){
-            if (this.elementos[i] == null){
+            if (this.elementos[i] == null){     // se a posição for nula, quer dizer que está disponível, pode adicionar
                 this.elementos[i] = elemento;
                 break;
             }
